@@ -33,7 +33,7 @@ export default function Home() {
                 className="uppercase flex items-center gap-2"
               >
                 <a
-                  href="/assets/resume/ShashidharResume (1).pdf"
+                  href="/assets/resume/ShashidharResume.pdf"
                   // className="uppercase flex items-center gap-2"
                   className="flex gap-2 items-center"
                   download

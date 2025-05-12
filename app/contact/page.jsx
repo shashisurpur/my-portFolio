@@ -13,6 +13,7 @@ import {
 import { SelectItem } from "@radix-ui/react-select";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const info = [
   {
@@ -33,6 +34,50 @@ const info = [
 ];
 
 const Contact = () => {
+  const [formValues, setFormValues] = useState({
+    firstname: "",
+    email: "",
+  });
+  const [loadMessage, setLoadMessage] = useState(false);
+
+  const handleOnchange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    const newValue = { [name]: value };
+    setFormValues((prev) => ({ ...prev, ...newValue }));
+  };
+
+  const handleSendmessage = async (e) => {
+    e.preventDefault();
+    console.log("submit", formValues, formValues.firstname.length);
+
+    if (formValues.firstname.length === 0 && formValues.email.length === 0) {
+      alert("Please enter Firstname and Email address");
+    } else if (formValues.firstname.length === 0) {
+      alert("Please enter Firstname");
+    } else if (formValues.email === "") {
+      alert("Please enter Email address");
+    } else {
+      setLoadMessage(true);
+      try {
+        const response = await fetch("/api/contactMe", {
+          method: "POST",
+          body: JSON.stringify(formValues),
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        });
+        if (response.status === 200) {
+          response.json;
+        }
+      } catch (error) {
+      } finally {
+        setLoadMessage(false);
+      }
+    }
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -50,13 +95,33 @@ const Contact = () => {
               {/* <p className="text-white/60">jahhahdahdhahd</p> */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input
+                  type="firstname"
+                  placeholder="Firstname"
+                  name="firstname"
+                  onChange={handleOnchange}
+                />
+                <Input
+                  type="lastname"
+                  name="lastname"
+                  placeholder="Lastname"
+                  onChange={handleOnchange}
+                />
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  onChange={handleOnchange}
+                />
+                <Input
+                  type="phone"
+                  name="phone"
+                  placeholder="Phone number"
+                  onChange={handleOnchange}
+                />
               </div>
 
-              <Select>
+              {/* <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
@@ -83,15 +148,41 @@ const Contact = () => {
                     </SelectItem>
                   </SelectGroup>
                 </SelectContent>
-              </Select>
+              </Select> */}
 
               <Textarea
                 className="h-[200px] boder border-white/10"
                 placeholder="Type your message here"
+                name="description"
+                onChange={handleOnchange}
               />
-              <Button size="md" className="max-w-40">
-                Send message
-              </Button>
+              {loadMessage ? (
+                <Button
+                  size="md"
+                  className="max-w-40 bg-white/3"
+                  onClick={handleSendmessage}
+                  disabled={true}
+                >
+                  Loading...
+                </Button>
+              ) : (
+                <Button
+                  size="md"
+                  className="max-w-40 cursor-pointer"
+                  onClick={handleSendmessage}
+                  disabled={loadMessage}
+                >
+                  {loadMessage ? "Loading..." : "Send message"}
+                </Button>
+              )}
+              {/* <Button
+                size="md"
+                className="max-w-40 cursor-pointer"
+                onClick={handleSendmessage}
+                disabled={loadMessage}
+              >
+                {loadMessage ? "Loading..." : "Send message"}
+              </Button> */}
             </form>
           </div>
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
