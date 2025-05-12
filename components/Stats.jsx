@@ -8,7 +8,7 @@ const stats = [
     text: "Years of experience",
   },
   {
-    num: 14,
+    num: 8,
     text: "Projects completed",
   },
   {
@@ -31,7 +31,7 @@ const Stats = () => {
               key={index}
               className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
             >
-              {stats.length - 1 === index ? (
+              {index !== 0 ? (
                 <div className="flex items-center">
                   <CountUp
                     end={stat.num}
