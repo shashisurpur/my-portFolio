@@ -12,6 +12,10 @@ export const transporter = nodemailer.createTransport({
     user: process.env.NEXT_PUBLIC_EMAIL,
     pass: process.env.NEXT_PUBLIC_EMAIL_PASS,
   },
+  tls: {
+    // do not fail on invalid certs
+    rejectUnauthorized: false,
+  },
 });
 
 export const mailOptions = {
