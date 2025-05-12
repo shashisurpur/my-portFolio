@@ -17,18 +17,14 @@ export default function Home() {
               <span className="text-accent">Shashi Surpur</span>
             </h1>
             <p className=" max-w-[500px] mb-9 text-white/80 text-[18px]">
-              Experienced UI Engineering Lead with 4 years of expertise in
-              designing and delivering high-performance, user-centric web
-              applications using React.js and Node.js. Skilled in leading
-              front-end teams, driving component-based architecture, and
-              implementing responsive, accessible interfaces that enhance user
-              experience across platforms. Adept at bridging front-end
-              innovation with scalable backend solutions, ensuring seamless
-              integration and performance. Known for fostering collaboration,
-              mentoring junior developers, and driving code quality through
-              modern development practices, agile methodologies, and CI/CD
-              pipelines. Passionate about creating intuitive digital experiences
-              that align with business goals and user needs.
+              UI Engineering Lead with 4 years of experience in designing and
+              delivering high-performance web applications using React-JS,
+              Material-UI, and Bootstrap. Proven expertise in full-stack
+              development and leading front-end teams to implement responsive
+              and accessible interfaces. Strong focus on code quality,
+              collaboration, and mentoring junior developers through agile
+              methodologies and CI/CD practices. Committed to creating
+              user-centric digital experiences that meet business objectives.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
