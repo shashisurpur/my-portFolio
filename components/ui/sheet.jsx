@@ -60,8 +60,8 @@ function SheetContent({ className, children, side = "right", ...props }) {
       >
         {children}
         <SheetPrimitive.Close
-          className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100  focus:outline-hidden disabled:pointer-events-none"
-          // className="absolute right-8 top-8 transition-opacity outline-none"
+          // className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute right-8 top-8 rounded-xs opacity-70 transition-opacity hover:opacity-100  focus:outline-hidden disabled:pointer-events-none"
+          className="absolute right-8 top-8 transition-opacity outline-none "
         >
           {/* <XIcon className="size-4" /> */}
           <IoMdClose className="text-3xl text-accent" />

@@ -18,7 +18,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[338px] h-[338px] xl:w-[512px] xl:h-[434px] mix-blend-lighten absolute"
+          className="w-[290px] h-[248px] xl:w-[512px] xl:h-[434px] mix-blend-lighten absolute"
         >
           <Image
             src={"/assets/Shashi-removebg-preview.png"}

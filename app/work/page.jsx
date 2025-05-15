@@ -114,23 +114,26 @@ const Work = () => {
   };
 
   return (
-    <motion.section
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0 md:px-6 @max-xs:px-6"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 px-6"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+        <div
+          className="flex flex-col xl:flex-row xl:gap-[30px]"
+          // className="flex flex-col xl:flex-row gap-[60px]"
+        >
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center max-sm:flex-col">
                 <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                   {project.num}
                 </div>
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 capitalize uppercase">
+                <h2 className="text-[42px] max-sm:text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 capitalize uppercase">
                   {project.title}
                 </h2>
               </div>
@@ -139,7 +142,7 @@ const Work = () => {
                 {project.category}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent capitalize">
@@ -151,7 +154,7 @@ const Work = () => {
               </ul>
 
               <div className="border border-white/20"></div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center max-sm:flex-col">
                 {projectNo > 0 && (
                   <div className="">
                     <button
@@ -240,7 +243,8 @@ const Work = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+      {/* <h1 className="text-white">Work</h1> */}
+    </motion.div>
   );
 };
 

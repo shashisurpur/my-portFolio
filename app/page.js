@@ -7,7 +7,7 @@ import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
-    <section className="h-full">
+    <section className="h-full px-6">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
@@ -33,7 +33,7 @@ export default function Home() {
                 className="uppercase flex items-center gap-2"
               >
                 <a
-                  href="/assets/resume/ShashidharResume.pdf"
+                  href="/assets/resume/ShashidharResume (1).pdf"
                   // className="uppercase flex items-center gap-2"
                   className="flex gap-2 items-center"
                   download
