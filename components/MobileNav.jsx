@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
 
@@ -32,12 +32,14 @@ const links = [
 
 const MobileNav = () => {
   const pathName = usePathname();
+  console.log("path", pathName);
   return (
     <Sheet>
       <SheetTrigger className="flex items-center justify-center">
         <CiMenuFries className="text-accent text-[32px]" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
+      <SheetContent className="flex flex-col w-[400px]">
+        <SheetTitle></SheetTitle>
         <div className="mt-32 mb-20 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">

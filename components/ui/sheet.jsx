@@ -30,7 +30,7 @@ function SheetOverlay({ className, ...props }) {
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-primary",
+        "p-6 gap-4 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 fixed inset-0 z-50 bg-primary",
         className
       )}
       {...props}
@@ -60,8 +60,8 @@ function SheetContent({ className, children, side = "right", ...props }) {
       >
         {children}
         <SheetPrimitive.Close
-          // className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100  focus:outline-hidden disabled:pointer-events-none"
-          className="absolute right-8 top-8 transition-opacity outline-none"
+          className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100  focus:outline-hidden disabled:pointer-events-none"
+          // className="absolute right-8 top-8 transition-opacity outline-none"
         >
           {/* <XIcon className="size-4" /> */}
           <IoMdClose className="text-3xl text-accent" />
