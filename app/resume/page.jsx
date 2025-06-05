@@ -40,7 +40,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "4+ Years ",
+      fieldValue: "3+ Years ",
     },
     {
       fieldName: "Nationality",
@@ -67,9 +67,9 @@ const experience = {
   description: "jshshsah",
   items: [
     {
-      company: "Sanadi Technologies",
-      position: "Associate Software Engineer",
-      duration: "2020-2021",
+      company: "Object Source Technologies",
+      position: "Engineering Lead-UI",
+      duration: "2024-2025",
     },
     {
       company: "Auxtomate Technologies",
@@ -77,9 +77,9 @@ const experience = {
       duration: "2021-2024",
     },
     {
-      company: "Object Source Technologies",
-      position: "Engineering Lead-UI",
-      duration: "2024-2025",
+      company: "Sanadi Technologies",
+      position: "Associate Software Engineer",
+      duration: "2020-2021",
     },
   ],
 };
@@ -156,7 +156,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 px-6"
     >
       <div className="container mx-auto">
         <Tabs
@@ -272,7 +272,7 @@ const Resume = () => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-6"
+                        className="flex items-center max-sm:justify-between xl:justify-start gap-6"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>

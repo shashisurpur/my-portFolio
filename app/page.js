@@ -17,14 +17,9 @@ export default function Home() {
               <span className="text-accent">Shashi Surpur</span>
             </h1>
             <p className=" max-w-[500px] mb-9 text-white/80 text-[18px]">
-              UI Engineering Lead with 4 years of experience in designing and
-              delivering high-performance web applications using React-JS,
-              Material-UI, and Bootstrap. Proven expertise in full-stack
-              development and leading front-end teams to implement responsive
-              and accessible interfaces. Strong focus on code quality,
-              collaboration, and mentoring junior developers through agile
-              methodologies and CI/CD practices. Committed to creating
-              user-centric digital experiences that meet business objectives.
+              Worked as Engineering Lead UI with expertise in JavaScript, React
+              JS, Material-UI,Ant-Design,Node JS,Express JS,MongoDB having total
+              3+ years of IT professional experience.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
@@ -33,7 +28,7 @@ export default function Home() {
                 className="uppercase flex items-center gap-2"
               >
                 <a
-                  href="/assets/resume/ShashidharResume (1).pdf"
+                  href="/assets/resume/Shashi_ReactDeveloper.pdf"
                   // className="uppercase flex items-center gap-2"
                   className="flex gap-2 items-center"
                   download

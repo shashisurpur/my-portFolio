@@ -133,7 +133,7 @@ const Work = () => {
                 <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                   {project.num}
                 </div>
-                <h2 className="text-[42px] max-sm:text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 capitalize uppercase">
+                <h2 className="text-[42px] max-sm:text-[36px] font-bold leading-none text-white group-hover:text-accent transition-all duration-300 uppercase">
                   {project.title}
                 </h2>
               </div>
